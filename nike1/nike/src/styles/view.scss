@@ -1,0 +1,113 @@
+.view {
+  padding-bottom: 130px;
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__left {
+    width: 50%;
+    border-radius: 10px;
+    background: #F6FFF3;
+    padding: 143px 158px 182px 98px;
+    position: relative;
+    &::before {
+      content: 'view';
+      color: #E5F2E1;
+      font-size: 218.216px;
+      font-weight: 700;
+      text-transform: capitalize;
+      position: absolute;
+      top: 50%;
+      left: -50%;
+      transform: translate(3%, -50%)  rotate(-90deg);
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    color: #051101;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 130%;
+  }
+  &__text {
+    color: #051101;
+    line-height: 130%;
+    font-weight: 400;
+    margin-top: 23px;
+  }
+  &__right {
+    width: 50%;
+    height: 433px;
+    padding: 170px 262px;
+    border-radius: 10px;
+    background: url("../assets/view.png") center/cover;
+    position: relative;
+    left: -80px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__play {
+    width: 91px;
+    height: 91px;
+    background: #81d066;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .view__left {
+    position: relative;
+    padding: 100px 72px 100px 98px;
+    &::before {
+      top:0 ;
+      transform: translate(60%,-70%) rotate(0);
+    }
+  }
+  .view__right {
+    position: static;
+    width: 40%;
+    height: 300px;
+  }
+  .view__content {
+    column-gap: 20px;
+  }
+
+}
+
+@media (max-width: 886px) {
+  .view__left {
+    &::before {
+      transform: translate(50%, -70%) rotate(0);
+    }
+  }
+  .view__title {
+    font-size: 39px;
+  }
+  .view__right {
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .view__content {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .view__left{
+    width: 100%;
+    &::before {
+      transform: translate(110%, -70%) rotate(0);
+      font-size: 190px;
+    }
+
+  }
+  .view__right {
+    width: 705px;
+    height: 350px;
+  }
+
+}
