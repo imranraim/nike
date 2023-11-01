@@ -10,8 +10,21 @@
   font-family: "Raleway", sans-serif;
 
 }
+body {
+  scroll-behavior: smooth!important;
+}
 
 $green: #5cbe3a;
+
+.up-page {
+  position: fixed;
+  bottom: 150px;
+  right: 40px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .container {
   max-width: 1200px;
